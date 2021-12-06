@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+$Soft-blue: hsl(215,
+51%,
+70%);
+$Cyan: hsl(178,
+100%,
+50%);
+$main-BG: hsl(217,
+54%,
+11%);
+$card-BG: hsl(216,
+50%,
+16%);
+$line: hsl(215,
+32%,
+27%);
+$White: hsl(0,
+0%,
+100%);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $main-BG;
+}
+
+main {
+    background-color: $main-BG;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    background-color: $card-BG;
+    align-items: center;
+    border-radius: 15px;
+    width: 350px;
+    padding: 20px;
+    .image-header {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        img {
+            border-radius: 15px;
+            width: 100%;
+            margin-bottom: 15px;
+            margin: auto;
+        }
+    }
+    h1 {
+        color: $White;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    p {
+        color: $Soft-blue;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .bottom-section {
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        .price {
+            display: flex;
+            justify-content: space-around;
+            img {
+                height: fit-content;
+                width: fit-content;
+                margin: auto 5px auto auto;
+            }
+            p {
+                font-weight: 600;
+                color: $Cyan;
+                font-size: 15px;
+                margin: auto;
+            }
+        }
+        .time {
+            display: flex;
+            img {
+                width: fit-content;
+                height: fit-content;
+                margin: auto 5px auto auto;
+            }
+            p {
+                margin: auto;
+                font-weight: 400;
+                font-size: 17px;
+            }
+        }
+    }
+    hr {
+        margin: 5px auto;
+        border: 1px solid $line;
+    }
+    .profile-section {
+        height: 50px;
+        display: flex;
+        img {
+            width: 40px;
+            height: fit-content;
+            border: 2px solid $White;
+            border-radius: 50%;
+            margin: auto 5px;
+        }
+        p {
+            margin: auto 50px auto 10px;
+            span {
+                color: $White;
+            }
+        }
+    }
+}
+
+#name:hover {
+    cursor: pointer;
+    color: $Cyan;
+}
+
+#title:hover {
+    cursor: pointer;
+    color: $Cyan;
+}
+
+.overlay {
+    background-color: hsla(178, 100%, 50%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 15px;
+}
+
+#eye {
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    margin: 0;
+}
+
+.overlay:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
